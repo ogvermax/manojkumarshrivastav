@@ -1,0 +1,70 @@
+body { padding-top: 0; }
+.site-header { position: static; }
+.carousel-inner>.item {
+    display: block;
+}
+#heroSlider.carousel {
+    padding-top: 0;
+}
+#heroSlider .carousel-indicators {
+    display: none;
+}
+#heroSlider .carousel-control,
+#bookSlider .carousel-control {
+    display: none;
+}
+.btn-toggle > .glyphicon,
+.dropdown-toggle > span,
+.list-toggle > span {
+    display: none;
+}
+.collapse, .dropdown-menu {
+    display: block;
+}
+/* ================= MAIN NAV HOVER FALLBACK IF JAVASCRIPT IS DISABLED ================= */
+.navbar-darktower .navbar-toggle,
+.navbar-darktower .navbar-toggle .hamburger { display: none; }
+@media (max-width:991px){
+    .navbar-darktower .navbar-offcanvas {
+        width: 100%;
+        display: block;
+        position: static;
+    }
+    .cm-menu { max-height:300px; overflow-y: auto; }
+    .cm-menu li { padding-left: 20px; }
+    .cm-menu ul { display:block; max-height:80em; opacity:1; width:100%; overflow: visible; }
+}
+.toggle-menu + .cm-menu { opacity:1; max-height:80em; }
+
+
+.cm-menu li li:hover > ul { left:100%; }
+.cm-menu li:nth-last-child(-n+2) ul { left:auto; right:0; }
+.cm-menu li:nth-last-child(-n+2) li:hover > ul { left:auto; right:100%; }
+
+@media (min-width:992px){
+   .cm-menu ul {
+        display:block;
+        position:absolute;
+        z-index:-1;
+        top:100%; left:0;
+        width:100%; min-width:295px;
+        background:#D9CBBA;
+        -wekbit-transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, left 0.4s ease-in-out, right 0.4s ease-in-out;
+                transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, left 0.4s ease-in-out, right 0.4s ease-in-out;
+    }
+    .cm-menu li:hover > ul { display:block; max-height:80em; opacity:1; width:100%; overflow: visible; }
+    .cm-menu ul ul { top:0px; background-color: #2D2523; color: #FFFFFF; }
+    .cm-menu ul ul a { color: #FFFFFF; }
+
+    .cm-menu li:nth-last-child(-n+2) ul { left:auto; right:0; }
+}
+
+@media (min-width:1200px){
+    .nav-bar ul li li {  }
+    .nav-bar ul li li li { margin-left:0; margin-right:0; }
+    .nav-bar ul ul a { padding:10px 30px; background:transparent; }
+
+    .nav-bar ul ul a:hover, .nav-bar ul ul a:focus { color:#FFFFFF; background:#2D2523; }
+    
+    .nav-bar ul ul ul a:hover, .nav-bar ul ul ul a:focus{ color:#FFFFFF; background:#3C3432; }   
+}
